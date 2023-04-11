@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/Users/albertoquintero/obj_ori_python/packages/flaskApp/static/basic.css">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <div class="menu-link">
+        <a href="/user/Albert">Code Projects</a>
+    </div>
+    <div style="text-align: right;">
+        <img src="static/alien1.jpg" alt="myProfileImage">
+    </div>
+    <div>
+        <h1>{{ name }}</h1>
+        <p><small>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+            location, US
+        </small></p>
+        <div class="content">
+            {% for content in aboutMe %}
+                <p>{{content}}<p>
+            {% endfor %}
+        </div>
+        <p><strong>Hobbies:</strong> {{ hobbies }}</p>
+        <p><strong>Favorite color:</strong> {{ favoriteColor }}</p>
+        <div class="social-icon">
+            <a href="https://www.google.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20">
+                    <path d="M8.652,16.404c-0.186,0-0.337,0.151-0.337,0.337v2.022c0,0.186,0.151,0.337,0.337,0.337s0.337-0.151,0.337-0.337v-2.022C8.989,16.555,8.838,16.404,8.652,16.404z" fill="currentColor" fill-rule="evenodd"></path>
+                    <path d="M11.348,16.404c-0.186,0-0.337,0.151-0.337,0.337v2.022c0,0.186,0.151,0.337,0.337,0.337s0.337-0.151,0.337-0.337v-2.022C11.685,16.555,11.535,16.404,11.348,16.404z" fill="currentColor" fill-rule="evenodd"></path>
+                    <path d="M17.415,5.281V4.607c0-2.224-1.847-4.045-4.103-4.045H10H6.687c-2

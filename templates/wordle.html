@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wordle Game</title>
+</head>
+<body>
+	<h1>Wordle</h1>
+	<p>{{ message }}</p>
+	{% if not game_over %}
+		<form method="POST" action="/">
+			<label for="guess">Guess a letter:</label>
+			<input type="text" id="guess" name="guess" maxlength="1">
+			<input type="hidden" name="display_word" value="{{ display_word }}">
+			<input type="hidden" name="message" value="{{ message }}">
+			<input type="hidden" name="game_over" value="{{ game_over }}">
+			<input type="submit" value="Guess">
+		</form>
+	{% endif %}
+	<p>{{ display_word }}</p>
+	{% if game_over %}
+		<p>{{ message }}</p>
+		<p>Play again?</p>
+		<ul>
+			<li><a href="/">Easy</a></li>
+			<li><a href="/medium">Medium</a></li>
+			<li><a href="/hard">Hard</a></li>
+		</ul>
+	{% endif %}
+</body>
+</html>
