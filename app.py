@@ -16,8 +16,8 @@ def writeToFile(filename, message):
 @app.route('/')
 def HomePage():
     name = "Alberto Quintero"
-    details = readDetails('/Users/albertoquintero/obj_ori_python/packages/flaskApp/static/details.txt')
-    hobbies = readDetails('/Users/albertoquintero/obj_ori_python/packages/flaskApp/static/hobbies.txt')
+    details = readDetails('static/details.txt')
+    hobbies = readDetails('static/hobbies.txt')
     favorite_food = "Pizza, Chicken wings(pretty obvious since eating them is my hobby), and pasta"
     return render_template("base.html", name=name, aboutMe=details, hobbies=hobbies, favorite_food=favorite_food)
     
