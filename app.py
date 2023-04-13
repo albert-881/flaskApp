@@ -52,17 +52,17 @@ def CodeProjects(name):
     return render_template("code.html", projects=projects, categories=categories, selected_category=category)
 
 
-@app.route('/form', methods =['GET', 'POST'])
+
+@app.route('/form', methods=['GET', 'POST'])
 def formDemo():
-    name = None
-    category = None
-    message = None
     if request.method == 'POST':
         name = request.form['name']
         category = request.form['category']
         message = request.form['message']
         
-    return render_template('form.html', name=name, category=category, message=message)
+        return render_template('form.html', name=name, category=category, message=message, submitted=True)
+    
+    return render_template('form.html', submitted=False)
 
 
 
